@@ -13,7 +13,7 @@ var imgs=[
   "bombbattle",
   "jetterjs",
   "maze",
-  "ofo query"
+  "bike query"
 ];
 var click=[
   "Jet.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')",
@@ -25,7 +25,7 @@ var click=[
   "Jet.open('https://theajack.github.io/bombbattle')",
   "Jet.open('https://theajack.github.io/jetterjs')",
   "Jet.open('https://theajack.github.io/maze')",
-  "Jet.open('https://theajack.github.io/ofo')",
+  "Jet.open('https://theajack.github.io/bike')",
 ];
 J.load(function(){
   setSize();

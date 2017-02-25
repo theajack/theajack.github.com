@@ -16,6 +16,8 @@ body{
   border-radius:50%;
   position:absolute;
   transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  -ms-transition:all 0.2s linear;
   -webkit-transition:all 0.2s linear;
   /*border:1px solid #000;*/
   color:#000;

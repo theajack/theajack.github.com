@@ -13,7 +13,8 @@ var imgs=[
   "bombbattle",
   "jetterjs",
   "maze",
-  "bike query"
+  "bike query",
+  "Personal blog"
 ];
 var click=[
   "Jet.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')",
@@ -21,11 +22,12 @@ var click=[
   "Jet.show('In developing.','info')",
   "Jet.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')",
   "Jet.open('http://bikeshare.imwork.net')",
-  "Jet.open('https://theajack.github.io')",
-  "Jet.open('https://theajack.github.io/bombbattle')",
-  "Jet.open('https://theajack.github.io/jetterjs')",
-  "Jet.open('https://theajack.github.io/maze')",
-  "Jet.open('https://theajack.github.io/bike')",
+  "Jet.open('https://theajack.github.io/')",
+  "Jet.open('https://theajack.github.io/bombbattle/')",
+  "Jet.open('https://theajack.github.io/jetterjs/')",
+  "Jet.open('https://theajack.github.io/maze/')",
+  "Jet.open('https://theajack.github.io/bike/')",
+  "Jet.open('https://theajack.github.io/blog/')"
 ];
 J.load(function(){
   setSize();

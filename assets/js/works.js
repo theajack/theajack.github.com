@@ -22,12 +22,12 @@ var click=[
   "Jet.show('In developing.','info')",
   "Jet.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')",
   "Jet.open('http://bikeshare.imwork.net')",
-  "Jet.open('https://theajack.github.io/')",
-  "Jet.open('https://theajack.github.io/bombbattle/')",
-  "Jet.open('https://theajack.github.io/jetterjs/')",
-  "Jet.open('https://theajack.github.io/maze/')",
-  "Jet.open('https://theajack.github.io/bike/')",
-  "Jet.open('https://theajack.github.io/blog/')"
+  "Jet.open('http://www.theajack.com/')",
+  "Jet.open('http://www.theajack.com/bombbattle/')",
+  "Jet.open('http://www.theajack.com/jetterjs/')",
+  "Jet.open('http://www.theajack.com/maze/')",
+  "Jet.open('http://www.theajack.com/bike/')",
+  "Jet.open('http://www.theajack.com/blog/')"
 ];
 J.load(function(){
   setSize();

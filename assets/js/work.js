@@ -1,16 +1,16 @@
 function Float(element,i){
   this.element=element;
   this.index=i;
-  this.dirc=Jet.getRandom(0,360);
-  this.speed=Jet.getRandom(2,5)*0.1;
-  this.len=Jet.getRandom(150,200)*rate;
+  this.dirc=J.getRandom(0,360);
+  this.speed=J.getRandom(2,5)*0.1;
+  this.len=J.getRandom(120,160)*rate;
   this.r=this.len/2;
   this.isStop=false;
-  this.x=Jet.getRandom(this.r,width-this.r);
-  this.y=Jet.getRandom(this.r,height-this.r);
+  this.x=J.getRandom(this.r,width-this.r);
+  this.y=J.getRandom(this.r,height-this.r);
   this.init();
 };Float.prototype.resize=function(){
-  this.len=Jet.getRandom(150,200)*rate;
+  this.len=J.getRandom(120,160)*rate;
   this.r=this.len/2;
   this.element.css({
     width:this.len+"px",
@@ -30,7 +30,7 @@ function Float(element,i){
     },onmouseleave:function(){
       floats[this.attr("index")].start();
     },
-  });//.text(this.index);
+  });//.txt(this.index);
 };Float.prototype.move=function(r,d){
   this.x+=r*Math.cos(d*Math.PI/180);
   this.y+=r*Math.sin(d*Math.PI/180);

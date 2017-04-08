@@ -14,20 +14,28 @@ var imgs=[
   "jetterjs",
   "maze",
   "bike query",
-  "Personal blog"
+  "Personal blog",
+  "Shake mario",
+  "Fingerprint predict",
+  "cncharjs",
+  "Chinese typing game"
 ];
 var click=[
-  "Jet.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')",
-  "Jet.open('http://bikeshare.imwork.net/download.aspx')",
-  "Jet.show('In developing.','info')",
-  "Jet.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')",
-  "Jet.open('http://bikeshare.imwork.net')",
-  "Jet.open('http://www.theajack.com/')",
-  "Jet.open('http://www.theajack.com/bombbattle/')",
-  "Jet.open('http://www.theajack.com/jetterjs/')",
-  "Jet.open('http://www.theajack.com/maze/')",
-  "Jet.open('http://www.theajack.com/bike/')",
-  "Jet.open('http://www.theajack.com/blog/')"
+  "J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')",
+  "J.open('http://bikeshare.imwork.net/download.aspx')",
+  "J.show('In developing.','info')",
+  "J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')",
+  "J.open('http://bikeshare.imwork.net')",
+  "J.open('http://www.theajack.com/')",
+  "J.open('http://www.theajack.com/bombbattle/')",
+  "J.open('http://www.theajack.com/jetterjs/')",
+  "J.open('http://www.theajack.com/maze/')",
+  "J.open('http://www.theajack.com/bike/')",
+  "J.open('http://www.theajack.com/blog/')",
+  "J.open('http://www.theajack.com/jjump/')",
+  "J.open('http://www.theajack.com/predict/')",
+  "J.open('http://www.theajack.com/cnchar/')",
+  "J.open('http://www.theajack.com/type/')"
 ];
 J.load(function(){
   setSize();
@@ -35,8 +43,8 @@ J.load(function(){
   imgs.each(function(item,i){
     var f=J.new("div.float").append([
       J.new("img").attr("src","assets/images/"+imgs[i]+".png").css("margin-top",(25*rate)+"px"),
-      J.new("span").text(imgs[i]).css("font-size",(20*rate)+"px")
-    ]).event("onclick",click[i]);
+      J.new("span").txt(imgs[i]).css("font-size",(20*rate)+"px")
+    ]).clk(click[i]);
     parent.append(f);
   });
   J.class("float").each(function(item,i){

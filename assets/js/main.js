@@ -45,7 +45,7 @@ function setSize(){
     left:(cx-o_len/2)+"px",
     top:(cy-o_len/2)+"px",
     "z-index":""+(planetNum)
-  }).event("onclick","Jet.open('https://github.com/theajack/')");
+  }).clk("J.open('https://github.com/theajack/')");
 }
 window.onresize=function(){
   setSize();

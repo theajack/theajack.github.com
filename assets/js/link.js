@@ -18,7 +18,7 @@ J.ready(function(){
   var linkWrapper=J.id("tjLinks");
   if(linkWrapper!=undefined){
     J.tag("head").append(J.new("style").html("#tjLinks{margin: 5px;}.tj-link{text-decoration: underline;margin: 0 5px;font-size: 23px;cursor:pointer;}.tj-link:hover{color:#aaa;}@media screen and (max-width:1000px) {.tj-link{font-size: 15px;}}"));
-    var i=(tjLinkEn==true)?1:0;
+    var i=(linkWrapper.attr("en")==true||linkWrapper.attr("en")=='true')?1:0;
     var str="";
     tj_links.each(function(item){
       str+="<span class='tj-link' onclick='"+item[2]+"'>"+item[i]+"</span>"

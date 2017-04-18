@@ -27,6 +27,7 @@
   margin:0 auto;
   border-radius: 50%;
   box-shadow: 0 0 10px;
+  width: 120px;
 }
 #resumeTitle{
   display: block;
@@ -109,4 +110,38 @@
 }
 .link:hover{
   color:#aaa;
+}
+.d-show{
+  display:none;
+}
+@media screen and (max-width:950px) {
+  .d-hide{
+    display:none;
+  }
+  .d-show{
+    display:block;
+  }
+  #resumePaper{
+    margin:10px auto;
+    width:96%;
+  }
+  #resumeLeft{
+    width:100%;
+    border:0;
+    padding: 0px 10px;
+  }
+  #resumePhoto{
+    width:100px;
+  }
+  #resumeTitle{
+    font-size:20px;
+  }
+  .r-t{
+    font-size: 16px;
+    line-height: 30px;
+    height: 30px;
+  }
+  .l-t,.l-c{
+    font-size: 14px;
+  }
 }

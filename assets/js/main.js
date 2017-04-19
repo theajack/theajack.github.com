@@ -8,8 +8,8 @@ var rate;
 var o_len=150;
 //1200 700
 var t;
-var planetNum=5;
-var names=["resume","music","image","video","work"];
+var names=["resume","work","blog","music","image","video"];
+var planetNum=names.length;
 J.load(function(){
   setSize();
   names.each(function(item,i){

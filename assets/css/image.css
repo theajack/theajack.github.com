@@ -59,7 +59,15 @@ body{
     width:950px;
   }
 }
-@media screen and (max-width:950px){
+@media screen and (max-width:950px) and (min-width:550px) {
+  body{
+    width:92%;
+  }
+  .image-wrapper{
+    width:33.333333%;
+  }
+}
+@media screen and (max-width:550px){
   body{
     width:96%;
     

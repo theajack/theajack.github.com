@@ -1,5 +1,5 @@
 J.ready(function(){
-  J.tag("head").append(J.new("style").html("#tjCopyRight{position:fixed;right:0;bottom:0;text-align:center;background-color:rgba(150,150,150,.3);padding:0 8px;font-size:10px;color:#fff;border-radius:10px 0 0 0;line-height:20px}#tjLogo{position:fixed;right:0;top:0;width:60px;height:60px;background-color:rgba(150,150,150,.3);border-radius:0 0 0 30%;cursor:pointer}"));
+  J.tag("head").append(J.new("style").html("#tjCopyRight{position:fixed;right:0;bottom:0;text-align:center;background-color:rgba(150,150,150,.3);padding:0 8px;font-size:10px;color:#fff;border-radius:10px 0 0 0;line-height:20px;z-index:1000}#tjLogo{position:fixed;right:0;top:0;width:60px;height:60px;background-color:rgba(150,150,150,.3);border-radius:0 0 0 30%;cursor:pointer;z-index:1000}@media screen and (max-width:950px){#tjCopyRight{border-radius:5px 0 0 0;line-height:15px}#tjLogo{width:40px;height:40px}}"));
   J.body().append([
     J.new("img").attr({
       id:"tjLogo",
@@ -9,3 +9,4 @@ J.ready(function(){
     J.new("div").attr("id","tjCopyRight").html("TheaJack&nbsp;&nbsp;CopyRight&nbsp;&nbsp;2017")
   ]);
 })
+

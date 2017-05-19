@@ -25,6 +25,7 @@ body{
   font-size:20px;
   cursor:pointer;
   background-size:cover;
+  top:-100%;
 }
 .planet{
   box-shadow: 0 0 50px 5px #aaa;

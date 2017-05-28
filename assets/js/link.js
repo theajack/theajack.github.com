@@ -2,6 +2,7 @@ var tj_links=[
     ["个人主页","Home","J.open('http://www.theajack.com/')"],
     ["个人博客","Blog","J.open('http://www.theajack.com/blog/')"],
     ["jetter.js","jetter.js","J.open('http://www.theajack.com/jetterjs/')"],
+    ["bql.js","bql.js","J.open('http://www.theajack.com/bql/')"],
     ["cnchar.js","cnchar.js","J.open('http://www.theajack.com/cnchar/')"],
     ["汉字打字游戏","Typing","J.open('http://www.theajack.com/type/')"],
     ["指纹预测","Fingerprint","J.open('http://www.theajack.com/predict/')"],

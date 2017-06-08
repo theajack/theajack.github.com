@@ -3,7 +3,7 @@ J.ready(function(){
   if(typeof stat_name=="undefined"){
     var s_n=J.id("statName");
     if(s_n==null){
-      name="unknow";
+      name=J.tag("title").txt();
     }else{
       name=s_n.txt();
     }

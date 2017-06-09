@@ -164,7 +164,7 @@
     if(J.cookie("stat_date")!=now){
       add= "+"+data.count;
     }else{
-      add= "+"+getDiff(data.name+"_stat_count",data.count);
+      add= "+"+getDiff("id"+data.id+"_stat_count",data.count);
     }
     saveCookies(data,now);
     return add;
@@ -175,9 +175,9 @@
     if(J.cookie("stat_date")!=now){
       add= "+"+data.cookie_count;
     }else{
-      add= "+"+getDiff(data.name+"_cookie_count",data.cookie_count);
+      add= "+"+getDiff("id"+data.id+"_cookie_count",data.cookie_count);
     }
-    J.cookie(data.name+"_cookie_count",data.cookie_count,365);
+    J.cookie("id"+data.id+"_cookie_count",data.cookie_count,365);
     return add;
   }
   function getDiff(type,num){
@@ -188,7 +188,7 @@
     return num-lastNum;
   }
   function saveCookies(data,date){
-    J.cookie(data.name+"_stat_count",data.count,365);
+    J.cookie("id"+data.id+"_stat_count",data.count,365);
     J.cookie("stat_date",date,365);
   }
   function bindData(data,isRe){

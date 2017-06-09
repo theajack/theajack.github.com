@@ -2,6 +2,10 @@
 J.ready(function(){
   var name;
   var ss=J.tag("script");
+  var cookie=J.cookie("stat_mark");
+  if(cookie==""){
+    J.cookie("stat_mark","true");
+  }
   for(var i=0;i<ss.length;i++){
     if(ss[i].hasAttr("name")){
       name=ss[i].attr("name");
@@ -22,7 +26,7 @@ J.ready(function(){
   }
   J.jsonp({
     url:"http://15h97945z7.iok.la/stat.aspx",
-    data:{type:"add",name:name},
+    data:{type:"add",name:name,mark:cookie},
     success:function(data){},
     time:20000,
     timeout:function(err){},

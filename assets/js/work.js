@@ -1,16 +1,16 @@
 function Float(element,i){
   this.element=element;
   this.index=i;
-  this.dirc=J.getRandom(0,360);
-  this.speed=J.getRandom(2,5)*0.1;
-  this.len=J.getRandom(120,160)*rate;
+  this.dirc=J.random(0,360);
+  this.speed=J.random(2,5)*0.1;
+  this.len=J.random(120,160)*rate;
   this.r=this.len/2;
   this.isStop=false;
-  this.x=J.getRandom(this.r,width-this.r);
-  this.y=J.getRandom(this.r,height-this.r);
+  this.x=J.random(this.r,width-this.r);
+  this.y=J.random(this.r,height-this.r);
   this.init();
 };Float.prototype.resize=function(){
-  this.len=J.getRandom(120,160)*rate;
+  this.len=J.random(120,160)*rate;
   this.r=this.len/2;
   this.element.css({
     width:this.len+"px",

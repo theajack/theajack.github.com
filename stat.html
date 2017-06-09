@@ -29,6 +29,7 @@
     body{
       overflow-y:scroll;
       position:relative;
+      font-family:Microsoft Yahei;
     }
     .record{
       text-align: center;
@@ -108,17 +109,21 @@
       background-color:rgba(200,200,200,.6);
       color:rgb(37, 82, 111);
     }
+    #showText span{
+      color: #fff;
+      font-size: 15px;
+    }
   </style>
   <body>
     <div id="showTextWrapper">
-      <div id="showText">刷新成功</div>
+      <div id="showText" onclick="this.fadeOut()">刷新成功</div>
     </div>
     <div id="title">网站访问量数据统计</div>
     <div id="refresh" onclick="refresh()">刷新</div>
     <div id="main">
       <div class="record main">
         <div class="data name no-top">网站名</div>
-        <div class="data date no-top">日期</div>
+        <div class="data date no-top">接入日期</div>
         <div class="data no-top">总量</div>
         <div class="data no-top plus">增量</div>
         <div class="data no-top">详情</div>
@@ -138,8 +143,8 @@
   var t;
   function jsonp(type,name,call,isRe){
     J.jsonp({
-      url:"http://15h97945z7.iok.la/stat.aspx",
-      //url:"http://localhost:42864/theajack/stat.aspx",
+      //url:"http://15h97945z7.iok.la/stat.aspx",
+      url:"http://localhost:18295/theajack/stat.aspx",
       data:{type:type,name:name},
       success:function(data){
         call(data.value);
@@ -162,6 +167,16 @@
     saveCookies(data,now);
     return add;
   }
+  function checkCookiePlus(data){
+    var now=getDate();
+    var add="";
+    if(J.cookie("stat_date")!=now){
+      add= "+"+data.cookie_count;
+    }else{
+      add= "+"+getDiff(data.name+"_cookie_count",data.cookie_count);
+    }
+    return add;
+  }
   function getDiff(type,num){
     var lastNum=J.cookie(type);
     if(lastNum==""||lastNum==undefined){
@@ -171,6 +186,7 @@
   }
   function saveCookies(data,date){
     J.cookie(data.name+"_stat_count",data.count,365);
+    J.cookie(data.name+"_cookie_count",data.cookie_count,365);
     J.cookie("stat_date",date,365);
   }
   function bindData(data,isRe){
@@ -193,15 +209,18 @@
   function showInfo(text,time){
     clearTimeout(t);
     time=J.checkArg(time,1500);
-    J.id("showText").txt(text).fadeIn();;
-    t=setTimeout(function(){
-      J.id("showText").fadeOut(null,500);
-    },time);
+    J.id("showText").html(text).fadeIn();
+    if(time!="infi"){
+      t=setTimeout(function(){
+        J.id("showText").fadeOut(null,500);
+      },time);
+    }
   }
   function getOne(item){
     var add=checkPlusNum(item);
+    var info=item.name+"<br/><span>cookie量:"+item.cookie_count+"("+checkCookiePlus(item)+")</span>";
     return J.new("div.record").html('\
-      <div class="data name" onclick="showInfo(\''+item.name+'\',3000)">'+item.name+'</div>\
+      <div class="data name" onclick="showInfo(\''+info+'\',\'infi\')">'+item.name+'</div>\
       <div class="data date">'+item.date.split("T")[0].substring(2)+'</div>\
       <div class="data">'+item.count+'</div>\
       <div class="data plus">'+add+'</div>\

@@ -3,9 +3,9 @@ function Planet(name,index){
   this.element=J.id(name);
   this.index=index;
   this.track=S(".track."+name);
-  this.deg=J.getRandom(0,359);
-  this.speed=J.getRandom(1,6);
-  this.len=J.getRandom(80,100)*rate;
+  this.deg=J.random(0,359);
+  this.speed=J.random(1,6);
+  this.len=J.random(80,100)*rate;
   this.a=this.track.offsetWidth/2;
   this.b=this.track.offsetHeight/2;
   this.r=this.len/2;
@@ -16,7 +16,7 @@ function Planet(name,index){
   this.init();
 };Planet.prototype.t_deg=-16;
 Planet.prototype.resize=function(){
-  this.len=J.getRandom(80,100)*rate;
+  this.len=J.random(80,100)*rate;
   this.a=this.track.offsetWidth/2;
   this.b=this.track.offsetHeight/2;
   this.r=this.len/2;

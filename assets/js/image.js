@@ -25,7 +25,7 @@ function appendImages(){
       var w=J.new("div.image-wrapper");
       var s=num/n;
       for(var j=0;j<s;j++){
-        var index=J.getRandom(0,k)
+        var index=J.random(0,k)
         w.append(J.new("img").attr("src","assets/images/my_images/"+arr[index]+".jpg").clk(function(){
           changeUrl(this.attr("src"));
         }));

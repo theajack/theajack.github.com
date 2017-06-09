@@ -226,24 +226,27 @@
       <div class="data date">'+item.date.split("T")[0].substring(2)+'</div>\
       <div class="data">'+item.count+'</div>\
       <div class="data plus">'+add+'</div>\
-      <div class="data detail" detail-on="no" onclick="showDetail(this)">展开</div>\
+      <div class="data detail" detail-state="no" onclick="showDetail(this)">展开</div>\
     ');
   }
   function showDetail(obj){
     var par=obj.parent();
-    if(obj.attr("detail-on")=="true"){
+    var state=obj.attr("detail-state");
+    if(state=="true"){
       par.next().slideUp();
-      obj.attr("detail-on","false");
+      obj.attr("detail-state","false");
       obj.txt("展开");
-    }else if(obj.attr("detail-on")=="false"){
+    }else if(state=="false"){
       par.next().slideDown();
-      obj.attr("detail-on","true");
+      obj.attr("detail-state","true");
       obj.txt("收起");
-    }else{
+    }else if(state="init"){
+      obj.attr("detail-state","loading");
+      obj.txt("加载中");
       var name=par.child(0).txt();
       jsonp("view",name,function(d){
         bindDetailData(par,d);
-        obj.attr("detail-on","true");
+        obj.attr("detail-state","true");
         obj.txt("收起");
       });
     }

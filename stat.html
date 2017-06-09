@@ -177,6 +177,7 @@
     }else{
       add= "+"+getDiff(data.name+"_cookie_count",data.cookie_count);
     }
+    J.cookie(data.name+"_cookie_count",data.cookie_count,365);
     return add;
   }
   function getDiff(type,num){
@@ -188,7 +189,6 @@
   }
   function saveCookies(data,date){
     J.cookie(data.name+"_stat_count",data.count,365);
-    J.cookie(data.name+"_cookie_count",data.cookie_count,365);
     J.cookie("stat_date",date,365);
   }
   function bindData(data,isRe){

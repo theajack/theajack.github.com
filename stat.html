@@ -143,7 +143,7 @@
     });
   });
   var t;
-  function jsonp(type,name,call,isRe){
+  function jsonp(type,name,call,ecall){
     J.jsonp({
       url:"http://15h97945z7.iok.la/stat.aspx",
       //url:"http://localhost:18295/theajack/stat.aspx",
@@ -153,7 +153,10 @@
       },
       time:15000,
       timeout:function(err){
-        J.showWait("请求超时","error")
+        showInfo("请求超时");
+        if(ecall!=undefined){
+          ecall();
+        }
       },
       message:"请求超时"
     });
@@ -226,7 +229,7 @@
       <div class="data date">'+item.date.split("T")[0].substring(2)+'</div>\
       <div class="data">'+item.count+'</div>\
       <div class="data plus">'+add+'</div>\
-      <div class="data detail" detail-state="no" onclick="showDetail(this)">展开</div>\
+      <div class="data detail" detail-state="init" onclick="showDetail(this)">展开</div>\
     ');
   }
   function showDetail(obj){
@@ -248,6 +251,9 @@
         bindDetailData(par,d);
         obj.attr("detail-state","true");
         obj.txt("收起");
+      },function(){
+        obj.attr("detail-state","init");
+        obj.txt("展开");
       });
     }
   }

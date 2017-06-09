@@ -153,12 +153,14 @@
   }
   function checkPlusNum(data){
     var now=getDate();
-    saveCookies(data,now);
+    var add="";
     if(J.cookie("stat_date")!=now){
-      return "+"+data.count;
+      add= "+"+data.count;
     }else{
-      return "+"+getDiff(data.name+"_stat_count",data.count);
+      add= "+"+getDiff(data.name+"_stat_count",data.count);
     }
+    saveCookies(data,now);
+    return add;
   }
   function getDiff(type,num){
     var lastNum=J.cookie(type);

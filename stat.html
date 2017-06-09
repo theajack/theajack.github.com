@@ -138,8 +138,8 @@
   var t;
   function jsonp(type,name,call,isRe){
     J.jsonp({
-      //url:"http://15h97945z7.iok.la/stat.aspx",
-      url:"http://localhost:42864/theajack/stat.aspx",
+      url:"http://15h97945z7.iok.la/stat.aspx",
+      //url:"http://localhost:42864/theajack/stat.aspx",
       data:{type:type,name:name},
       success:function(data){
         call(data.value);

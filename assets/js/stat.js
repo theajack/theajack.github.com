@@ -5,6 +5,7 @@ J.ready(function(){
   var cookie=J.cookie("stat_mark");
   if(cookie==""){
     J.cookie("stat_mark","true");
+    cookie="false";
   }
   for(var i=0;i<ss.length;i++){
     if(ss[i].hasAttr("name")){

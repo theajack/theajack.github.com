@@ -14,7 +14,7 @@ var tj_links=[
     ["迷宫","Maze","J.open('http://www.theajack.com/maze/')"],
     ["2048 plus","2048 plus","J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')"],
     ["石头理财","Stone finance","J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')"],
-    ["邦占科技","Bangzhan Tech","J.show('http://www.theajack.com/bangzhan/')"],
+    ["邦占科技","Bangzhan Tech","J.open('http://www.theajack.com/bangzhan/')"],
     ["突破防线","Break Defence","J.show('In developing')"]
   ];
 J.ready(function(){

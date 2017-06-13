@@ -4,6 +4,7 @@ var tj_links=[
     ["jetter.js","jetter.js","J.open('http://www.theajack.com/jetterjs/')"],
     ["bql.js","bql.js","J.open('http://www.theajack.com/bql/')"],
     ["cnchar.js","cnchar.js","J.open('http://www.theajack.com/cnchar/')"],
+    ["jcode.js","jcode.js","J.open('http://www.theajack.com/jcode/')"],
     ["汉字打字游戏","Typing","J.open('http://www.theajack.com/type/')"],
     ["指纹预测","Fingerprint","J.open('http://www.theajack.com/predict/')"],
     ["摇摆玛丽","Shake mario","J.open('http://www.theajack.com/jjump/')"],
@@ -13,7 +14,8 @@ var tj_links=[
     ["迷宫","Maze","J.open('http://www.theajack.com/maze/')"],
     ["2048 plus","2048 plus","J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')"],
     ["石头理财","Stone finance","J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')"],
-    ["突破防线","Break Defence","J.show('In developing')"],
+    ["邦占科技","Bangzhan Tech","J.show('http://www.theajack.com/bangzhan/')"],
+    ["突破防线","Break Defence","J.show('In developing')"]
   ];
 J.ready(function(){
   var linkWrapper=J.id("tjLinks");

@@ -19,7 +19,9 @@ var imgs=[
   "Fingerprint predict",
   "cncharjs",
   "Chinese typing game",
-  "bql"
+  "bql",
+  "jcode",
+  "bangzhan_Tech"
 ];
 var click=[
   "J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')",
@@ -37,7 +39,9 @@ var click=[
   "J.open('http://www.theajack.com/predict/')",
   "J.open('http://www.theajack.com/cnchar/')",
   "J.open('http://www.theajack.com/type/')",
-  "J.open('http://www.theajack.com/bql/')"
+  "J.open('http://www.theajack.com/bql/')",
+  "J.open('http://www.theajack.com/jcode/')",
+  "J.open('http://www.theajack.com/bangzhan/')"
 ];
 J.load(function(){
   setSize();

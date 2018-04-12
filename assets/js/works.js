@@ -54,8 +54,8 @@ J.load(function(){
   var parent=J.id("floats");
   imgs.each(function(item,i){
     var f=J.new("div.float").append([
-      J.new("img").attr("src","assets/images/"+imgs[i]+".png").css("margin-top",(25*rate)+"px"),
-      J.new("span").txt(imgs[i]).css("font-size",(20*rate)+"px")
+      J.new("img").attr("src","assets/images/"+item+".png").css("margin-top",(25*rate)+"px"),
+      J.new("span").txt(item).css("font-size",(20*rate)+"px")
     ]).clk(click[i]);
     parent.append(f);
   });

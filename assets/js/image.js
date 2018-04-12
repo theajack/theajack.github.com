@@ -22,11 +22,11 @@ function appendImages(){
     J.id("bigWrapper").empty();
     var k=149;
     for(var i=0;i<n;i++){
-      var w=J.new("div.image-wrapper");
+      var w=J.ct("div.image-wrapper");
       var s=num/n;
       for(var j=0;j<s;j++){
         var index=J.random(0,k)
-        w.append(J.new("img").attr("src","assets/images/my_images/"+arr[index]+".jpg").clk(function(){
+        w.append(J.ct("img").attr("src","assets/images/my_images/"+arr[index]+".jpg").clk(function(){
           changeUrl(this.attr("src"));
         }));
         arr.removeByIndex(index,false);

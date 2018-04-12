@@ -5,15 +5,15 @@ var floatNum=5;
 var rate;
 var imgs=[
   "app_2048plus",
-  "app_bikeshare",
+  //"app_bikeshare",
   "app_breakdefence",
   "app_stonefinanace",
-  "bikeshare",
+  //"bikeshare",
   "theajack",
   "bombbattle",
   "jetterjs",
   "maze",
-  "bike query",
+  //"bike query",
   "Personal blog",
   "Shake mario",
   "Fingerprint predict",
@@ -21,19 +21,22 @@ var imgs=[
   "Chinese typing game",
   "bql",
   "jcode",
-  "bangzhan_Tech"
+  "bangzhan_Tech",
+  "Jet",
+  "奔跑的柴柴",
+  "jet_demo",
 ];
 var click=[
   "J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')",
-  "J.open('http://bikeshare.imwork.net/download.aspx')",
+  //"J.open('http://bikeshare.imwork.net/download.aspx')",
   "J.show('In developing.','info')",
   "J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')",
-  "J.open('http://bikeshare.imwork.net')",
+  //"J.open('http://bikeshare.imwork.net')",
   "J.open('http://www.theajack.com/')",
   "J.open('http://www.theajack.com/bombbattle/')",
   "J.open('http://www.theajack.com/jetterjs/')",
   "J.open('http://www.theajack.com/maze/')",
-  "J.open('http://www.theajack.com/bike/')",
+  //"J.open('http://www.theajack.com/bike/')",
   "J.open('http://www.theajack.com/blog/')",
   "J.open('http://www.theajack.com/jjump/')",
   "J.open('http://www.theajack.com/predict/')",
@@ -41,7 +44,10 @@ var click=[
   "J.open('http://www.theajack.com/type/')",
   "J.open('http://www.theajack.com/bql/')",
   "J.open('http://www.theajack.com/jcode/')",
-  "J.open('http://www.theajack.com/bangzhan/')"
+  "J.open('http://www.theajack.com/bangzhan/')",
+  "J.open('http://www.theajack.com/jet/')",
+  "J.show('请扫描二维码体验小程序，如果图片过小无法扫描，请右击并选择在新标签页中打开')",
+  "J.open('http://www.theajack.com/jet-demo/')"
 ];
 J.load(function(){
   setSize();

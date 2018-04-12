@@ -13,6 +13,7 @@ body{
   background-image:url('../images/p0.png');
   background-size:cover;
   box-shadow: 0 0 50px 5px #aaa;
+  color:#fff;
 }
 .float img{
   width: 60%;

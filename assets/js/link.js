@@ -1,6 +1,9 @@
 var tj_links=[
     ["个人主页","Home","J.open('http://www.theajack.com/')"],
+    ["Jet框架","Jet","J.open('http://www.theajack.com/jet/')"],
+    ["作品集","Works","J.open('http://www.theajack.com/works.html')"],
     ["个人博客","Blog","J.open('http://www.theajack.com/blog/')"],
+    ["JUI","JUI","J.open('http://www.theajack.com/jet/#/jui')"],
     ["jetter.js","jetter.js","J.open('http://www.theajack.com/jetterjs/')"],
     ["bql.js","bql.js","J.open('http://www.theajack.com/bql/')"],
     ["cnchar.js","cnchar.js","J.open('http://www.theajack.com/cnchar/')"],
@@ -9,13 +12,14 @@ var tj_links=[
     ["指纹预测","Fingerprint","J.open('http://www.theajack.com/predict/')"],
     ["摇摆玛丽","Shake mario","J.open('http://www.theajack.com/jjump/')"],
     ["炸弹人大作战","BombBattle","J.open('http://www.theajack.com/bombbattle/')"],
-    ["人人单车","Bikeshare","J.open('http://bikeshare.imwork.net')"],
-    ["人人单车纯净版","Bike query","J.open('http://www.theajack.com/bike/')"],
+//    ["人人单车","Bikeshare","J.open('http://bikeshare.imwork.net')"],
+//    ["人人单车纯净版","Bike query","J.open('http://www.theajack.com/bike/')"],
     ["迷宫","Maze","J.open('http://www.theajack.com/maze/')"],
     ["2048 plus","2048 plus","J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')"],
     ["石头理财","Stone finance","J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')"],
     ["邦占科技","Bangzhan Tech","J.open('http://www.theajack.com/bangzhan/')"],
-    ["突破防线","Break Defence","J.show('In developing')"]
+    ["突破防线","Break Defence","J.show('In developing')"],
+    ["赞助与支持","Donate","J.show('http://www.theajack.com/jet-demo/#/donate')"],
   ];
 J.ready(function(){
   var linkWrapper=J.id("tjLinks");

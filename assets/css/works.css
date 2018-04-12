@@ -19,6 +19,15 @@ body{
   width: 60%;
   border-radius:15px;
 }
+.float img.hover{
+  transform: scale(1);
+  transition: transform .5s linear;
+  -webkit-transition: -webkit-transform .5s linear;
+}
+.float img.hover:hover{
+  transform: scale(3);
+  box-shadow:#aaa 0 0 1px 1px;
+}
 .float span{
   display:block;
 }

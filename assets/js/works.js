@@ -46,7 +46,7 @@ var click=[
   "J.open('http://www.theajack.com/jcode/')",
   "J.open('http://www.theajack.com/bangzhan/')",
   "J.open('http://www.theajack.com/jet/')",
-  "J.show('请扫描二维码体验小程序，如果图片过小无法扫描，请右击并选择在新标签页中打开')",
+  "J.show('请扫描二维码体验小程序')",
   "J.open('http://www.theajack.com/jet-demo/')"
 ];
 J.load(function(){
@@ -56,7 +56,13 @@ J.load(function(){
     var f=J.new("div.float").append([
       J.new("img").attr("src","assets/images/"+item+".png").css("margin-top",(25*rate)+"px"),
       J.new("span").txt(item).css("font-size",(20*rate)+"px")
-    ]).clk(click[i]);
+    ])
+    if(item==='奔跑的柴柴'){
+      f.on('mouseenter',click[i]);
+      f.child(0).addClass('hover')
+    }else{
+      f.clk(click[i]);
+    }
     parent.append(f);
   });
   J.class("float").each(function(item,i){

@@ -24,7 +24,7 @@ var tj_links=[
 J.ready(function(){
   var linkWrapper=J.id("tjLinks");
   if(linkWrapper!=undefined){
-    J.tag("head").append(J.new("style").html('#tjLinks{margin: 5px;}#tjLinks:before, #tjLinks:after {display: table;content: " ";}#tjLinks:after {clear: both;}.tj-link{text-decoration: underline;margin: 0 5px;font-size: 20px;cursor:pointer;float:left;}.tj-link:hover{color:#aaa;}@media screen and (max-width:1000px) {.tj-link{font-size: 15px;}}'));
+    J.tag("head").append(J.new("style").html('#tjLinks{margin: 5px;}#tjLinks:before, #tjLinks:after {display: table;content: " ";}#tjLinks:after {clear: both;}.tj-link{text-decoration: underline;margin: 0 5px;font-size: 20px;line-height: 25px;cursor:pointer;float:left;}.tj-link:hover{color:#aaa!important;}@media screen and (max-width:1000px) {.tj-link{font-size: 15px;line-height:18px;}}'));
     var i=(linkWrapper.attr("link-en")==true||linkWrapper.attr("link-en")=='true')?1:0;
     var str="";
     tj_links.each(function(item){

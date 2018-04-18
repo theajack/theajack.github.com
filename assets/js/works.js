@@ -25,9 +25,9 @@ var imgs=[
   "Jet",
   "奔跑的柴柴",
   "jet_demo",
-];
+];http://sj.qq.com/myapp/detail.htm?apkName=com.main.theajack
 var click=[
-  "J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.main.theajack')",
+  "J.open('http://sj.qq.com/myapp/detail.htm?apkName=com.main.theajack')",
   //"J.open('http://bikeshare.imwork.net/download.aspx')",
   "J.show('In developing.','info')",
   "J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')",

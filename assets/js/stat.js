@@ -1,4 +1,5 @@
 //name属性    state_name     #statName
+var J=J||$J;
 J.ready(function(){
   var name;
   var ss=J.tag("script");

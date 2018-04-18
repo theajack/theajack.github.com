@@ -1,6 +1,7 @@
 var tj_links=[
     ["个人主页","Home","J.open('http://www.theajack.com/')"],
     ["Jet框架","Jet","J.open('http://www.theajack.com/jet/')"],
+    ["奔跑的柴柴","Jet","J.open('https://minapp.com/miniapp/6495/')"],
     ["作品集","Works","J.open('http://www.theajack.com/works.html')"],
     ["个人博客","Blog","J.open('http://www.theajack.com/blog/')"],
     ["JUI","JUI","J.open('http://www.theajack.com/jet/#/jui')"],
@@ -19,7 +20,7 @@ var tj_links=[
     ["石头理财","Stone finance","J.open('http://a.app.qq.com/o/simple.jsp?pkgname=com.example.stonefinance')"],
     ["邦占科技","Bangzhan Tech","J.open('http://www.theajack.com/bangzhan/')"],
     ["突破防线","Break Defence","J.show('In developing')"],
-    ["赞助与支持","Donate","J.show('http://www.theajack.com/jet-demo/#/donate')"],
+    ["赞助与支持","Donate","J.open('http://www.theajack.com/jet-demo/#/donate')"],
   ];
 J.ready(function(){
   var linkWrapper=J.id("tjLinks");

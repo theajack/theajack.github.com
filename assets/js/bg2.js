@@ -3,7 +3,12 @@
   www.theajack.com
 **/
 (function () {
-var canvas = J.new("canvas#bgCanvas");
+var canvas = J.new("canvas#bgCanvas").css({
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    'z-index': '-2'
+});
 var _w=J.width();
 var _h=J.height();
 var _n=(_w<1000)?15:30;
@@ -36,7 +41,7 @@ var cache_ctx = cacheCanvas.getContext("2d");
         left: '0',
         'z-index': '-2'
     });
-    J.body().prepend([canvas,_cover]);
+    J.id('error404').before([canvas,_cover]);
     for(var i=0;i<_n;i++){
       circles.push(new Circle());
     }

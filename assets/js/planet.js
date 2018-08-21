@@ -42,8 +42,10 @@ Planet.prototype.resize=function(){
     height:this.len+"px",
     "font-size":this.len/5+"px",
     "line-height":this.len+"px",
-    left:(pos.x)+"px",
-    top:(pos.y)+"px",
+    transform: 'translate('+pos.x+'px,'+pos.y+'px)',
+    '-webkit-transform': '-webkit-translate('+pos.x+'px,'+pos.y+'px)',
+    //left:(pos.x)+"px",
+    //top:(pos.y)+"px",
     "background-image":"url('assets/images/p"+this.index+".png')",
     "z-index":""+z_index
   }).event({
@@ -84,16 +86,18 @@ Planet.prototype.resize=function(){
     y:cy+l*Math.sin((d+this.t_deg)*Math.PI/180)-this.r
   };
 };Planet.prototype.move=function(dx,dy){
-  this.element.css({
+  /*this.element.css({
     left:"+="+(dx)+"px",
     top:"+="+(dy)+"px"
   });
   this.x+=dx;
-  this.y+=dy;
+  this.y+=dy;*/
 };Planet.prototype.moveTo=function(x,y){
   this.element.css({
-    left:(x)+"px",
-    top:(y)+"px"
+    transform: 'translate('+x+'px,'+y+'px)',
+    '-webkit-transform': '-webkit-translate('+x+'px,'+y+'px)'
+    //left:(x)+"px",
+    //top:(y)+"px"
   });
   this.x=x;
   this.y=y;

@@ -12,6 +12,7 @@ var names=["resume","work","blog","music","image","video"];
 var planetNum=names.length;
 J.load(function(){
   setSize();
+  
   names.each(function(item,i){
     planets.append(new Planet(item,i));
   });
@@ -20,6 +21,11 @@ J.load(function(){
       item.act();
     });
   },200);
+  //J.class('planet').removeClass('center-pos');
+  setTimeout(function(){
+    //J.id('planets').css('opacity','1');
+    
+  },500)
 });
 function setSize(){
   height=J.height(),width=J.width();
@@ -42,8 +48,6 @@ function setSize(){
     height:o_len+"px",
     "font-size":o_len/5+"px",
     "line-height":o_len+"px",
-    left:(cx-o_len/2)+"px",
-    top:(cy-o_len/2)+"px",
     "z-index":""+(planetNum)
   }).clk("J.open('https://github.com/theajack/')");
 }

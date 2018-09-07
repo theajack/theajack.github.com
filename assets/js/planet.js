@@ -42,10 +42,6 @@ Planet.prototype.resize=function(){
     height:this.len+"px",
     "font-size":this.len/5+"px",
     "line-height":this.len+"px",
-    transform: 'translate('+pos.x+'px,'+pos.y+'px)',
-    '-webkit-transform': '-webkit-translate('+pos.x+'px,'+pos.y+'px)',
-    //left:(pos.x)+"px",
-    //top:(pos.y)+"px",
     "background-image":"url('assets/images/p"+this.index+".png')",
     "z-index":""+z_index
   }).event({
@@ -54,7 +50,7 @@ Planet.prototype.resize=function(){
     },onmouseleave:function(){
       planets[this.attr("index")].start();
     },
-  });
+  })
   this.x=pos.x;
   this.y=pos.y;
 };Planet.prototype.checkZIndex=function(){
@@ -82,8 +78,8 @@ Planet.prototype.resize=function(){
 };Planet.prototype.getPos=function(d){
   var l=this.a*this.b/(Math.sqrt( Math.pow(this.b*Math.cos(d*Math.PI/180),2) + Math.pow(this.a*Math.sin(d*Math.PI/180),2) ));
   return {
-    x:cx+l*Math.cos((d+this.t_deg)*Math.PI/180)-this.r,
-    y:cy+l*Math.sin((d+this.t_deg)*Math.PI/180)-this.r
+    x:l*Math.cos((d+this.t_deg)*Math.PI/180)-this.r,
+    y:l*Math.sin((d+this.t_deg)*Math.PI/180)-this.r
   };
 };Planet.prototype.move=function(dx,dy){
   /*this.element.css({
@@ -96,8 +92,6 @@ Planet.prototype.resize=function(){
   this.element.css({
     transform: 'translate('+x+'px,'+y+'px)',
     '-webkit-transform': '-webkit-translate('+x+'px,'+y+'px)'
-    //left:(x)+"px",
-    //top:(y)+"px"
   });
   this.x=x;
   this.y=y;

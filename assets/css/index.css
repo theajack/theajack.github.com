@@ -51,3 +51,43 @@ body{
   background-color:transparent;
   border:1px dashed #aaa;
 }
+
+.index-ad{
+  width: 60px;
+  height: 100px;
+  position: fixed;
+  right: 0;
+  top: 70px;
+  opacity: .7;
+  transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  -ms-transition:all 0.2s linear;
+  -webkit-transition:all 0.2s linear;
+  z-index:100;
+  text-align: center;
+}
+.index-ad span{
+  font-size: 12px;
+  transition:font-size 0.2s linear;
+  -moz-transition:font-size 0.2s linear;
+  -ms-transition:font-size 0.2s linear;
+  -webkit-transition:font-size 0.2s linear;
+}
+.index-ad:hover{
+  width: 260px;
+  opacity: 1;
+}
+.index-ad:hover span{
+  font-size: 22px;
+}
+.index-ad span:last-child{
+  display: none;
+}
+.index-ad:hover span:last-child{
+  font-size: 22px;
+  display: inline;
+}
+.index-ad img{
+  border-radius: 10%;
+  width:100%;
+}

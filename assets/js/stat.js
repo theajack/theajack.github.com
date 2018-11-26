@@ -8,7 +8,7 @@
         var head = _t.tag("head");
         options.data[_checkArg(options.callback, "callback")] = callbackName;
         var script = document.createElement('script');
-        head.append(script);
+        head.appendChild(script);
         window[callbackName] = function(a) {
           head.removeChild(script);
           clearTimeout(script.timer);
@@ -19,9 +19,9 @@
           options.success && options.success(a);
         };
         if (options.dataType != undefined && options.dataType.toUpperCase() == "JSON") {
-          script.attr("src", options.url + '?json=' + encodeURIComponent(JSON.stringify(options.data)))
+          script.setAttribute("src", options.url + '?json=' + encodeURIComponent(JSON.stringify(options.data)))
         } else {
-          script.attr("src", options.url + '?' + _formatParams(options.data))
+          script.setAttribute("src", options.url + '?' + _formatParams(options.data))
         }
         options.time = _checkArg(options.time, 5000);
         script.timer = setTimeout(function() {

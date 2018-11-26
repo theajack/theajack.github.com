@@ -9,6 +9,7 @@ var tj_links=[
     ["bql.js","bql.js","J.open('https://www.theajack.com/bql/')"],
     ["cnchar.js","cnchar.js","J.open('https://www.theajack.com/cnchar/')"],
     ["jcode.js","jcode.js","J.open('https://www.theajack.com/jcode/')"],
+    ["log-progress","log-progres","J.open('https://www.npmjs.com/package/log-progress')"],
     ["微信友评价","comment","J.open('https://minapp.com/miniapp/9053/')"],
     ["汉字打字游戏","Typing","J.open('https://www.theajack.com/type/')"],
     ["指纹预测","Fingerprint","J.open('https://www.theajack.com/predict/')"],
@@ -23,6 +24,7 @@ var tj_links=[
     ["突破防线","Break Defence","J.show('In developing')"],
     ["赞助与支持","Donate","J.open('https://www.theajack.com/jet-demo/#/donate')"],
   ];
+var J=J||Jet.$;
 J.ready(function(){
   var linkWrapper=J.id("tjLinks");
   if(linkWrapper!=undefined){

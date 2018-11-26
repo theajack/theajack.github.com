@@ -27,7 +27,7 @@ J.ready(function(){
     }
   }
   J.jsonp({
-    url:"http://15h97945z7.iok.la/stat.aspx",
+    url:"https://theajack.goho.co/stat.aspx",
     data:{type:"add",name:name,mark:cookie},
     success:function(data){},
     time:20000,

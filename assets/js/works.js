@@ -25,7 +25,11 @@ var imgs=[
   "Jet",
   "奔跑的柴柴",
   "jet_demo",
-];http://sj.qq.com/myapp/detail.htm?apkName=com.main.theajack
+  "友评价",
+  "抢票加速互助",
+];
+//http://sj.qq.com/myapp/detail.htm?apkName=com.main.theajack
+var smallProMsg="J.show('请扫描二维码体验小程序')";
 var click=[
   "J.open('http://sj.qq.com/myapp/detail.htm?apkName=com.main.theajack')",
   //"J.open('http://bikeshare.imwork.net/download.aspx')",
@@ -46,9 +50,12 @@ var click=[
   "J.open('http://www.theajack.com/jcode/')",
   "J.open('http://www.theajack.com/bangzhan/')",
   "J.open('http://www.theajack.com/jet/')",
-  "J.show('请扫描二维码体验小程序')",
-  "J.open('http://www.theajack.com/jet-demo/')"
+  "J.open('https://minapp.com/miniapp/6495/')",
+  "J.open('http://www.theajack.com/jet-demo/')",
+  "J.open('https://minapp.com/miniapp/9053/')",
+  "J.open('https://minapp.com/miniapp/10096/')",
 ];
+var smallPro=['奔跑的柴柴','友评价','抢票加速互助']
 J.load(function(){
   setSize();
   var parent=J.id("floats");
@@ -57,12 +64,11 @@ J.load(function(){
       J.new("img").attr("src","assets/images/"+item+".png").css("margin-top",(25*rate)+"px"),
       J.new("span").txt(item).css("font-size",(20*rate)+"px")
     ])
-    if(item==='奔跑的柴柴'){
-      f.on('mouseenter',click[i]);
+    if(smallPro.indexOf(item)!==-1){
+      f.on('mouseenter',smallProMsg);
       f.child(0).addClass('hover')
-    }else{
-      f.clk(click[i]);
     }
+    f.clk(click[i]);
     parent.append(f);
   });
   J.class("float").each(function(item,i){
